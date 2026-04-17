@@ -15,4 +15,45 @@ const pessoas = [
 
 const pessoasFiltradas = pessoas.filter(pessoas => pessoas.idade > 30);
 
-console.log(pessoasFiltradas)
+console.log(pessoasFiltradas);
+
+const numerosDobrados = numeros.map((valor) => valor * 2);
+
+console.log(numerosDobrados);
+
+const addToPessoas = pessoas.map(pessoa => 'nome: ' + pessoa.nome)
+
+console.log(addToPessoas);
+
+const PessoasIdade = pessoas.map(pessoas => ({ idade: pessoas.idade }));
+
+console.log(PessoasIdade);
+
+const comIds = pessoas.map((pessoas, index) => {
+    const newObj = { ...pessoas }
+    newObj.id = index + 1;
+    return newObj;
+});
+
+console.log(comIds)
+console.log(pessoas)
+
+const somaIdades = pessoas.reduce((value, pessoas, indice, array) => {
+
+    value += pessoas.idade;
+    console.log(value);
+    return value;
+}, 0)
+
+console.log(somaIdades);
+
+const maisVelha = pessoas.reduce((acumulador, valor) => {
+    console.log('idade: ' + valor.idade)
+    //if (acumulador.idade > valor.idade) {
+    //  return acumulador;
+    //}
+
+
+})
+
+console.log(maisVelha);
