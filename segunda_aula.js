@@ -35,20 +35,20 @@ const comIds = pessoas.map((pessoas, index) => {
     return newObj;
 });
 
-console.log(comIds)
-console.log(pessoas)
+//console.log(comIds)
+//console.log(pessoas)
 
 const somaIdades = pessoas.reduce((value, pessoas, indice, array) => {
 
     value += pessoas.idade;
-    console.log(value);
+    //console.log(value);
     return value;
 }, 0)
 
-console.log(somaIdades);
+//console.log(somaIdades);
 
 const maisVelha = pessoas.reduce((acumulador, valor) => {
-    console.log('idade: ' + valor.idade)
+    //console.log('idade: ' + valor.idade)
     //if (acumulador.idade > valor.idade) {
     //  return acumulador;
     //}
@@ -56,4 +56,15 @@ const maisVelha = pessoas.reduce((acumulador, valor) => {
 
 })
 
-console.log(maisVelha);
+const valores = [2, 3, 5, 10, 22, 33, 55, 80, 88];
+
+const numerosPares = valores.filter(valor => valor % 2 === 0)
+    .map(valor => valor * 2)
+    .reduce((ac, valor) => ac + valor);
+
+console.log(numerosPares);
+
+valores.forEach(function (valor, indice, array) {
+    console.log(valor, indice)
+})
+//console.log(maisVelha);
