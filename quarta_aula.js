@@ -60,3 +60,13 @@ esperaAi('Frase 2', rand(1, 4));
 esperaAi('Frase 3', rand(1, 2));
 console.log('Serei exibido primeiro!');
 
+const promises = ['primeiro valor',
+    esperaAi('Promise 1'),
+    esperaAi('Promise 2'),
+    esperaAi('Promise 3'),];
+
+
+Promise.all(promises)
+    .then(valor => {
+        console.log(valor)
+    }).catch();
